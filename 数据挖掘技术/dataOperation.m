@@ -86,3 +86,5 @@ plot(X23,Y23, 'ob');
 hold on;
 plot(X24,Y24, 'om');
 title("等频离散化");
+clc;
+clear;
