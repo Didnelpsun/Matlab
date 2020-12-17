@@ -51,4 +51,38 @@ for i=1:k
         end
     end
 end
-clear i j row sort_data;
+clear i j row sort_data rows rules;
+X11 = width_data(1, find(width_data(1,:)));
+X12 = width_data(2, find(width_data(2,:)));
+X13 = width_data(3, find(width_data(3,:)));
+X14 = width_data(4, find(width_data(4,:)));
+X21 = frequancy_data(1, find(frequancy_data(1,:)));
+X22 = frequancy_data(2, find(frequancy_data(2,:)));
+X23 = frequancy_data(3, find(frequancy_data(3,:)));
+X24 = frequancy_data(4, find(frequancy_data(4,:)));
+Y11 = ones(size(find(width_data(1,:)))) * 1;
+Y12 = ones(size(find(width_data(2,:)))) * 2;
+Y13 = ones(size(find(width_data(3,:)))) * 3;
+Y14 = ones(size(find(width_data(4,:)))) * 4;
+Y21 = ones(size(find(frequancy_data(1,:)))) * 1;
+Y22 = ones(size(find(frequancy_data(2,:)))) * 2;
+Y23 = ones(size(find(frequancy_data(3,:)))) * 3;
+Y24 = ones(size(find(frequancy_data(4,:)))) * 4;
+subplot(1,2,1);
+plot(X11,Y11, 'or');
+hold on;
+plot(X12,Y12, 'og');
+hold on;
+plot(X13,Y13, 'ob');
+hold on;
+plot(X14,Y14, 'om');
+title("等宽离散化");
+subplot(1,2,2);
+plot(X21,Y21, 'or');
+hold on;
+plot(X22,Y22, 'og');
+hold on;
+plot(X23,Y23, 'ob');
+hold on;
+plot(X24,Y24, 'om');
+title("等频离散化");
